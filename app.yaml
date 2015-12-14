@@ -1,0 +1,21 @@
+application: water-service
+version: epa-rfi
+runtime: python27
+api_version: 1
+threadsafe: true
+
+libraries:
+- name: webapp2
+  version: "latest"
+- name: PIL
+  version: "latest"
+- name: ssl
+  version: "latest"
+- name: pycrypto
+  version: "latest" 
+- name: numpy
+  version: "latest"
+
+handlers:
+- url: /.*
+  script: api.handlers

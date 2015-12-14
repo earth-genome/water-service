@@ -1,6 +1,6 @@
 ## water-service
 
-The objective of this repository is to serve out surface water data from
+The objective of this repository is to provision global data on surface water from
 Landsat 7 satellite imagery.  
 
 **Base URL**
