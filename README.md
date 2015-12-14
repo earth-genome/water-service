@@ -28,4 +28,4 @@ a local news organization.  When and how much?  The web app allows users to
 watch the lake cycles and annual average extent of the lake.  You can watch
 the change.
 
-![Screenshot](http://i.imgur.com/AzFhiAB.gif)
+![Screenshot](https://dl.dropboxusercontent.com/u/5365589/water.gif)
