@@ -1,7 +1,8 @@
 ## water-service
 
-The objective of this repository is to provision global data on surface water from
-Landsat 7 satellite imagery.  
+The objective of this repository is to provision global data on surface water
+from Landsat 7 satellite imagery.  This project represents a layer on top of
+Earth Engine, operationalizing remote sensing science for web app development.
 
 **Base URL**
 
@@ -84,3 +85,13 @@ watch the lake cycles and annual average extent of the lake.  You can watch
 the change.
 
 ![Screenshot](https://dl.dropboxusercontent.com/u/5365589/water.gif)
+
+### Development
+
+The API runs on the Google [App Engine Python SDK](https://cloud.google.com/ap
+pengine/downloads#Google_App_Engine_SDK_for_Python), which includes a web
+server application you can run on your computer that "simulates your
+application running in the App Engine Python runtime environment."  To run
+locally, you will first have to contact
+[**@danhammer**](https://github.com/danhammer) for credentials to access the
+backend.
