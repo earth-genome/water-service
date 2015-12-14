@@ -1,3 +1,14 @@
+
+## Earth Genome
+
+The Earth Genome is a 501(c)(3) nonprofit organization that provisions environmental information via web service APIs and custom decision support tools.  Earth Genome’s initial tool is called the Green Infrastructure Support Tool, which values wetland restoration in financial terms based on water storage potential for industrial applications.  The initial set of APIs include global surface water extent, California aquifer recharge potential, US crop composition, global deforestation, among others.  The surface water API has been submitted as part of this RFP.  The Earth Genome is run by the following experts:
+
+- Steve McCormick.  Former CEO of The Nature Conservancy and The Moore Foundation.
+- Glen Low. Former Principal at both Blu Skye Consulting and Bain & Company.  
+- Dan Hammer.  Former Presidential Innovation Fellow at NASA and Chief Data Scientist at the World Resources Institute, Fellow at the Berkeley Institute for Data Science.
+
+The objective of the Earth Genome is to identify environmental web services that people will actually use for operational decisions.  We work with teams across sectors, including the Dow Chemical Company, the World Resources Institute, and Microsoft to build tools and services that scale.  We take our cues from 18F and the broader digital service community, ensuring that all we do abides by best practice standards of digital delivery.
+
 ## water-service
 
 The objective of this repository is to provision global data on surface water
@@ -94,4 +105,9 @@ server application you can run on your computer that "simulates your
 application running in the App Engine Python runtime environment."  To run
 locally, you will first have to contact
 [**@danhammer**](https://github.com/danhammer) for credentials to access the
-backend.
+backend.  Once you have these credentials, you need only run the development
+server and check that it runs:
+
+1. Run `dev_appserver.py --port=8080 .` in the console from within the `water-service`
+directory.
+2. Navigate to `localhost:8080` and you should see a success json object.

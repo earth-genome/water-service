@@ -49,7 +49,25 @@ class WaterSeriesHandler(webapp2.RequestHandler):
         self.response.write(res)
 
 
+class BaseHandler(webapp2.RequestHandler):
+    def get(self):
+
+        # headers
+        self.response.headers.add_header("Access-Control-Allow-Origin", "*")
+        self.response.headers['Content-Type'] = 'application/json'
+
+        # response
+        res = json.dumps(
+            dict(
+                status="success",
+                message="go to https://github.com/earth-genome/water-service for parameter descriptions"
+            )
+        )
+        self.response.write(res)
+
+
 handlers = webapp2.WSGIApplication([
+    ('/', BaseHandler),
     ('/water', WaterHandler),
     ('/water/series', WaterSeriesHandler)
 ], debug=True)
