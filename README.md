@@ -1,11 +1,15 @@
+- [Earth Genome description](#earth-genome)
+- [Surface water API](#water-service)
+    + [Using the API](#using-the-api-example-web-application)
+    + [Development](#development)
 
 ## Earth Genome
 
 The Earth Genome is a 501(c)(3) nonprofit organization that provisions environmental information via web service APIs and custom decision support tools.  Earth Genome’s initial tool is called the Green Infrastructure Support Tool, which values wetland restoration in financial terms based on water storage potential for industrial applications.  The initial set of APIs include global surface water extent, California aquifer recharge potential, US crop composition, global deforestation, among others.  The surface water API has been submitted as part of this RFP.  The Earth Genome is run by the following experts:
 
-- Steve McCormick.  Former CEO of The Nature Conservancy and The Moore Foundation.
-- Glen Low. Former Principal at both Blu Skye Consulting and Bain & Company.  
-- Dan Hammer.  Former Presidential Innovation Fellow at NASA and Chief Data Scientist at the World Resources Institute, Fellow at the Berkeley Institute for Data Science.
+- [Steve McCormick](https://en.wikipedia.org/wiki/Steve_McCormick_(executive)).  Former CEO of The Nature Conservancy and The Moore Foundation.
+- [Glen Low](https://www.linkedin.com/in/glen-low-7136566). Former Principal at both Blu Skye Consulting and Bain & Company.
+- [Dan Hammer](http://danham.me/r).  Former Presidential Innovation Fellow at NASA and Chief Data Scientist at the World Resources Institute, Fellow at the Berkeley Institute for Data Science.
 
 The objective of the Earth Genome is to identify environmental web services that people will actually use for operational decisions.  We work with teams across sectors, including the Dow Chemical Company, the World Resources Institute, and Microsoft to build tools and services that scale.  We take our cues from 18F and the broader digital service community, ensuring that all we do abides by best practice standards of digital delivery.
 
@@ -82,7 +86,7 @@ http://
 }
 ```
 
-### Using the API: **example web application**
+### Using the API: example web application
 
 A very simple web app that displays the data allows the user to draw a
 bounding box.  The returned geometry is overlaid on the basemap, along with
@@ -96,7 +100,6 @@ watch the lake cycles and annual average extent of the lake.  You can watch
 the change.
 
 ![Screenshot](https://dl.dropboxusercontent.com/u/5365589/water.gif)
-
 ### Development
 
 The API runs on the Google [App Engine Python SDK](https://cloud.google.com/ap
