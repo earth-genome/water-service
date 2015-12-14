@@ -19,6 +19,6 @@ http://
 
 A very simple web app that displays the data allows the user to draw a
 bounding box.  The returned geometry is overlaid on the basemap, along with
-the water series as a [D3](http://d3js.org/) plot.
+the water series as a [D3](http://d3js.org/) plot.  The 
 
-![Screenshot](http://i.imgur.com/3wVCvpa.gifv)
+![Screenshot](http://i.imgur.com/AzFhiAB.gif)
