@@ -13,7 +13,62 @@ http://
 | begin     | date  | n/a             | YYYY-MM-DD  | begin date                                          |
 | end       | date  | **today**       | YYYY-MM-DD  | end date                                            |
 
+**Example URL**
 
+[http://water-test.appspot.com/water/series?coords=[[-119.93,39.33],[-119.93,39.35],[-119.90,39.35],[-119.90,39.33],[-119.93,39.33]]&begin=2010-02-02&end=2011-02-02](http://water-test.appspot.com/water/series?coords=[[-119.93,39.33],[-119.93,39.35],[-119.90,39.35],[-119.90,39.33],[-119.93,39.33]]&begin=2010-02-02&end=2011-02-02)
+
+```json
+{
+    "count": 12,
+    "begin": "2010-02-02",
+    "end": "2011-02-02",
+    "result": [
+        {
+            "date": "2010-02-02",
+            "area": 0.546627708789871
+        },
+        {
+            "date": "2010-03-06",
+            "area": 0.9044314584855125
+        },
+        ...
+        {
+            "date": "2011-01-01",
+            "area": 0.9385196006817629
+        }
+    ],
+    "poly": {
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [
+                        -119.93,
+                        39.33
+                    ],
+                    [
+                        -119.93,
+                        39.35
+                    ],
+                    [
+                        -119.9,
+                        39.35
+                    ],
+                    [
+                        -119.9,
+                        39.33
+                    ],
+                    [
+                        -119.93,
+                        39.33
+                    ]
+                ]
+            ]
+        },
+        "type": "Feature"
+    }
+}
+```
 
 ### Using the API: **example web application**
 
