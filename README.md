@@ -1,5 +1,7 @@
+##### Table of Contents  
 - [Earth Genome description](#earth-genome)
 - [Surface water API](#water-service)
+    + [Documentation](#base-url)
     + [Using the API](#using-the-api-example-web-application)
     + [Development](#development)
 
@@ -19,7 +21,7 @@ The objective of this repository is to provision global data on surface water
 from Landsat 7 satellite imagery.  This project represents a layer on top of
 Earth Engine, operationalizing remote sensing science for web app development.
 
-**Base URL**
+#####Base URL
 
 http://
 
@@ -29,7 +31,7 @@ http://
 | begin     | date  | n/a             | YYYY-MM-DD  | begin date                                          |
 | end       | date  | **today**       | YYYY-MM-DD  | end date                                            |
 
-**Example URL**
+#####Example URL
 
 [http://water-test.appspot.com/water/series?coords=[[-119.93,39.33],[-119.93,39.35],[-119.90,39.35],[-119.90,39.33],[-119.93,39.33]]&begin=2010-02-02&end=2011-02-02](http://water-test.appspot.com/water/series?coords=[[-119.93,39.33],[-119.93,39.35],[-119.90,39.35],[-119.90,39.33],[-119.93,39.33]]&begin=2010-02-02&end=2011-02-02)
 
