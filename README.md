@@ -21,6 +21,12 @@ The objective of this repository is to provision global data on surface water
 from Landsat 7 satellite imagery.  This project represents a layer on top of
 Earth Engine, operationalizing remote sensing science for web app development.
 
+### extent
+
+
+
+### series
+
 #####Base URL
 
 http://
@@ -54,37 +60,7 @@ http://
             "date": "2011-01-01",
             "area": 0.9385196006817629
         }
-    ],
-    "poly": {
-        "geometry": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [
-                        -119.93,
-                        39.33
-                    ],
-                    [
-                        -119.93,
-                        39.35
-                    ],
-                    [
-                        -119.9,
-                        39.35
-                    ],
-                    [
-                        -119.9,
-                        39.33
-                    ],
-                    [
-                        -119.93,
-                        39.33
-                    ]
-                ]
-            ]
-        },
-        "type": "Feature"
-    }
+    ]
 }
 ```
 
