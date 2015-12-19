@@ -1,11 +1,15 @@
+
+
 ##### Table of Contents  
 
-| - [Earth Genome description](#earth-genome)|
-|- [Surface water API](#water-service)|
-|    + [Extent documentation](#base-url)|
-|    + [Series documentation](#base-url)|
-|    + [Using the API](#using-the-api-example-web-application)|
-|    + [Development](#development)|
+- [Earth Genome description](#earth-genome)
+- [Surface water API](#water-service)
+    + [Extent documentation](#base-url)
+    + [Series documentation](#base-url)
+    + [Using the API](#using-the-api-example-web-application)
+    + [Development](#development)
+
+=========
 
 ## Earth Genome
 
@@ -21,17 +25,35 @@ The objective of the Earth Genome is to identify environmental web services that
 
 The objective of this repository is to provision global data on surface water
 from Landsat 7 satellite imagery.  This project represents a layer on top of
-Earth Engine, operationalizing remote sensing science for web app development.
+Earth Engine, operationalizing remote sensing science for web app developers.
 
 ### extent
 
+This endpoint provides the extent of surface water for a supplied area and
+year as a GeoJSON polygon.  The 
+
+#####Base URL
+
+http://water-test.appspot.com/water/poly
+
+| parameter | type  | default         | format      | description                                         |
+|-----------|-------|-----------------|-------------|-----------------------------------------------------|
+| geometry  | list  | n/a             | [[lat, lon], [lat, lon], ...]        | list of lat-lon tuples defining the are of interest |
+| year      | int   | n/a             | YYYY        | year                                                |
+
+#####Example URL
+
+[http://water-test.appspot.com/water/poly?coords=[[-119.93,39.33],[-119.93,39.35],[-119.90,39.35],[-119.90,39.33],[-119.93,39.33]]&year=2014](http://water-test.appspot.com/water/poly?coords=[[-119.93,39.33],[-119.93,39.35],[-119.90,39.35],[-119.90,39.33],[-119.93,39.33]]&year=2014)
 
 
 ### series
 
+This endpoint provides the propotion of the supplied area that is covered by
+water for each available image within the supplied date range.  
+
 #####Base URL
 
-http://
+http://water-test.appspot.com/water/series
 
 | parameter | type  | default         | format      | description                                         |
 |-----------|-------|-----------------|-------------|-----------------------------------------------------|
@@ -87,10 +109,13 @@ pengine/downloads#Google_App_Engine_SDK_for_Python), which includes a web
 server application you can run on your computer that "simulates your
 application running in the App Engine Python runtime environment."  To run
 locally, you will first have to contact
-[**@danhammer**](https://github.com/danhammer) for credentials to access the
+[@danhammer](https://github.com/danhammer) for credentials to access the
 backend.  Once you have these credentials, you need only run the development
 server and check that it runs:
 
 1. Run `dev_appserver.py --port=8080 .` in the console from within the `water-service`
 directory.
 2. Navigate to `localhost:8080` and you should see a success json object.
+
+Once changes are made, submit a pull request to this repository and
+[@danhammer](https://github.com/danhammer)
