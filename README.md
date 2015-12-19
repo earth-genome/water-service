@@ -1,9 +1,11 @@
 ##### Table of Contents  
-- [Earth Genome description](#earth-genome)
-- [Surface water API](#water-service)
-    + [Documentation](#base-url)
-    + [Using the API](#using-the-api-example-web-application)
-    + [Development](#development)
+
+| - [Earth Genome description](#earth-genome)|
+|- [Surface water API](#water-service)|
+|    + [Extent documentation](#base-url)|
+|    + [Series documentation](#base-url)|
+|    + [Using the API](#using-the-api-example-web-application)|
+|    + [Development](#development)|
 
 ## Earth Genome
 
