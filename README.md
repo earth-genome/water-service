@@ -107,7 +107,7 @@ http://water-test.appspot.com/water/series
 
 ```json
 {
-    "count": 12
+    "count": 12,
     "begin": "2010-02-02",
     "end": "2011-02-02",
     "result": [
