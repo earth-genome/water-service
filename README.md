@@ -6,6 +6,7 @@
     + [Series documentation](#base-url)
     + [Using the API](#using-the-api-example-web-application)
     + [Development](#development)
+
 =========
 
 ## Earth Genome
@@ -25,7 +26,6 @@ The objective of this repository is to provision global data on surface water fr
 ### extent
 
 This endpoint provides the extent of surface water for a supplied area and a supplied year (1999-2014) as a GeoJSON polygon. 
-
 #####Base URL
 
 http://water-test.appspot.com/water/poly
@@ -33,7 +33,7 @@ http://water-test.appspot.com/water/poly
 | parameter | type  | default         | format      | description                                         |
 |-----------|-------|-----------------|-------------|-----------------------------------------------------|
 | geometry  | list  | n/a             | [[lat, lon], [lat, lon], ...]        | list of lat-lon tuples defining the are of interest |
-| year      | int   | n/a             | YYYY        | year                                                |
+| date      | int   | n/a             | YYYY-01-01        | year (the first of the year)                  |
 
 #####Example URL
 
@@ -80,9 +80,9 @@ http://water-test.appspot.com/water/poly
                     "count": 1,
                     "label": 1
                 }
-            },
+            }
             "..."
-        }
+        ]
     }
 }
 ```
