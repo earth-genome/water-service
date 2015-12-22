@@ -1,5 +1,3 @@
-
-
 ##### Table of Contents  
 
 - [Earth Genome description](#earth-genome)
@@ -8,29 +6,25 @@
     + [Series documentation](#base-url)
     + [Using the API](#using-the-api-example-web-application)
     + [Development](#development)
-
 =========
 
 ## Earth Genome
 
-The Earth Genome is a 501(c)(3) nonprofit organization that provisions environmental information via web service APIs and custom decision support tools.  Earth Genome’s initial tool is called the Green Infrastructure Support Tool, which values wetland restoration in financial terms based on water storage potential for industrial applications.  The initial set of APIs include global surface water extent, California aquifer recharge potential, US crop composition, global deforestation, among others.  The surface water API has been submitted as part of this RFP.  The Earth Genome is run by the following experts:
+The [Earth Genome](http://www.earthgenome.org) is a 501(c)(3) nonprofit organization that provisions environmental information via web service APIs and custom decision support tools.  Earth Genome’s initial tool is called the Green Infrastructure Support Tool, which values wetland restoration in financial terms based on water storage potential for industrial applications.  The initial set of APIs include global surface water extent, California aquifer recharge potential, US crop composition, global deforestation, among others.  The surface water API has been submitted as part of this RFP.  The Earth Genome is run by the following experts:
 
 - [Steve McCormick](https://en.wikipedia.org/wiki/Steve_McCormick_(executive)).  Former CEO of The Nature Conservancy and The Moore Foundation.
 - [Glen Low](https://www.linkedin.com/in/glen-low-7136566). Former Principal at both Blu Skye Consulting and Bain & Company.
 - [Dan Hammer](http://danham.me/r).  Former Presidential Innovation Fellow at NASA and Chief Data Scientist at the World Resources Institute, Fellow at the Berkeley Institute for Data Science.
 
 The objective of the Earth Genome is to identify environmental web services that people will actually use for operational decisions.  We work with teams across sectors, including the Dow Chemical Company, the World Resources Institute, and Microsoft to build tools and services that scale.  We take our cues from 18F and the broader digital service community, ensuring that all we do abides by best practice standards of digital delivery.
-
+ 
 ## water-service
 
-The objective of this repository is to provision global data on surface water
-from Landsat 7 satellite imagery.  This project represents a layer on top of
-Earth Engine, operationalizing remote sensing science for web app developers.
+The objective of this repository is to provision global data on surface water from Landsat 7 satellite imagery.  This project represents a layer on top of Earth Engine, operationalizing remote sensing science for web app developers.
 
 ### extent
 
-This endpoint provides the extent of surface water for a supplied area and
-year as a GeoJSON polygon.  The 
+This endpoint provides the extent of surface water for a supplied area and a supplied year (1999-2014) as a GeoJSON polygon. 
 
 #####Base URL
 
@@ -43,13 +37,59 @@ http://water-test.appspot.com/water/poly
 
 #####Example URL
 
-[http://water-test.appspot.com/water/poly?coords=[[-119.93,39.33],[-119.93,39.35],[-119.90,39.35],[-119.90,39.33],[-119.93,39.33]]&year=2014](http://water-test.appspot.com/water/poly?coords=[[-119.93,39.33],[-119.93,39.35],[-119.90,39.35],[-119.90,39.33],[-119.93,39.33]]&year=2014)
+[http://water-test.appspot.com/water/poly?coords=[[-119.93,39.33],[-119.93,39.35],[-119.90,39.35],[-119.90,39.33],[-119.93,39.33]]&year=2014](http://water-test.appspot.com/water/poly?coords=[[-119.93,39.33],[-119.93,39.35],[-119.90,39.35],[-119.90,39.33],[-119.93,39.33]]&year=2014-01-01)
 
+```json
+{
+    "date": "1999-01-01",
+    "result": {
+        "type": "FeatureCollection",
+        "features": [
+            {
+                "geometry": {
+                    "type": "Polygon",
+                    "geodesic": false,
+                    "coordinates": [
+                        [
+                            [
+                                96.14937980516474,
+                                16.70507102348662
+                            ],
+                            [
+                                96.15027812044887,
+                                16.70507102348662
+                            ],
+                            [
+                                96.15027812044887,
+                                16.705969338770743
+                            ],
+                            [
+                                96.14937980516474,
+                                16.705969338770743
+                            ],
+                            [
+                                96.14937980516474,
+                                16.70507102348662
+                            ]
+                        ]
+                    ]
+                },
+                "type": "Feature",
+                "id": "+107033+18596",
+                "properties": {
+                    "count": 1,
+                    "label": 1
+                }
+            },
+            "..."
+        }
+    }
+}
+```
 
 ### series
 
-This endpoint provides the propotion of the supplied area that is covered by
-water for each available image within the supplied date range.  
+This endpoint provides the propotion of the supplied area that is covered by water for each available image within the supplied date range.  
 
 #####Base URL
 
